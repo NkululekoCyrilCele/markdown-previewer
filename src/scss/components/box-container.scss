@@ -1,0 +1,48 @@
+@use "../util" as *;
+
+.box {
+    &__container {
+        #editor {
+            resize: both;
+            width: 80vw;
+            height: 20vh;
+            border: none;
+            padding: em(10) em(20);
+            overflow: auto;
+            box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.8);
+
+            @include breakpoints(tablets) {
+                resize: both;
+                width: 92vw;
+                height: 40vh;
+                margin-bottom: em(20);
+            }
+
+            @include breakpoints(computers) {
+                width: 750px;
+                resize: vertical;
+            }
+        }
+    }
+    #preview {
+        background-color: black;
+        resize: none;
+        width: 80vw;
+        height: 100vh;
+        border: none;
+        padding: em(10) em(20);
+        overflow: auto;
+        box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.8);
+
+        @include breakpoints(tablets) {
+            resize: none;
+            width: 92vw;
+            height: 100vh;
+        }
+
+        @include breakpoints(computers) {
+            width: 750px;
+            resize: none;
+        }
+    }
+}

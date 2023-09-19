@@ -1,0 +1,13 @@
+@use "../util/" as *;
+
+.container {
+    background-color: var(--tomato);
+    margin: 0 auto;
+    max-width: em(800);
+    padding: em(25);
+
+    @include breakpoints(computers) {
+        padding: em(20);
+        background-color: var(--dark-slate-grey);
+    }
+}

@@ -1,0 +1,18 @@
+@use "../util/" as *;
+
+h1 {
+    margin-top: 0;
+    padding-top: em(10);
+    font-size: em(32);
+    line-height: 1.2;
+    margin-bottom: em(24);
+
+    @include breakpoints(computers) {
+        margin-top: 0;
+        margin-bottom: em(10);
+        padding-top: 0;
+        font-size: em(38);
+        font-weight: 700;
+        text-align: center;
+    }
+}
